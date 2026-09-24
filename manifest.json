@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "En2En — Simple English",
+  "version": "1.0.0",
+  "description": "Understand difficult English with clear, simple English explanations.",
+  "permissions": ["contextMenus"],
+  "host_permissions": ["https://api.deepseek.com/*"],
+  "background": {"service_worker": "src/background/worker.js"},
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["src/content/selection.js", "src/content/result-popup.js", "src/content/content.js"],
+    "css": ["src/content/content.css"],
+    "run_at": "document_idle"
+  }]
+}

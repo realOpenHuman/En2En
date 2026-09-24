@@ -1,0 +1,7 @@
+{
+  "name": "en2en",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Explain difficult English in simple English with DeepSeek.",
+  "scripts": {"build": "node scripts/build.js chrome", "build:chrome": "node scripts/build.js chrome", "build:firefox": "node scripts/build.js firefox", "test": "node --test"}
+}

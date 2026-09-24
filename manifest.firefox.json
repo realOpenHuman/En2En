@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "En2En — Simple English",
+  "version": "1.0.0",
+  "description": "Understand difficult English with clear, simple English explanations.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "en2en-simple-english@example.org",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": ["contextMenus"],
+  "host_permissions": ["https://api.deepseek.com/*"],
+  "background": {"scripts": ["config.js", "src/prompts/simplify.js", "src/api/deepseek.js", "src/background/background.js"]},
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["src/content/selection.js", "src/content/result-popup.js", "src/content/content.js"],
+    "css": ["src/content/content.css"],
+    "run_at": "document_idle"
+  }]
+}
