@@ -62,18 +62,8 @@ Tests cover API responses and error handling, browser menu configuration, backgr
 ## Privacy and security
 
 - Only after the user explicitly requests an explanation, the selected text and up to 800 characters of nearby context are sent to DeepSeek. Do not select passwords, personal information, or other sensitive content.
-- The build script injects the API key into extension code under `dist/`. **A key embedded in a browser extension can be extracted by its users. `.env` and `.gitignore` reduce the risk of accidentally committing a key; they do not protect a key in a distributed extension.**
-- Do not commit `.env` or `dist/`, and do not distribute a build containing a personal API key. Public distribution should use a server-side proxy and suitable key management.
 - DeepSeek processes submitted content under its own terms and privacy policy. Review those policies before use.
 
-## Open-source release checklist
-
-This repository is ready for further public review, but **license and release preparation are still required before a polished public release**:
-
-- Choose and add an explicit open-source license (there is currently no `LICENSE` file; without one, others generally cannot legally reuse the code as open source).
-- Confirm `.env` and `dist/` are not tracked by Git, and check repository history, issues, screenshots, and logs for credentials.
-- Manually verify the context menu, successful and failed API calls, themes, and zoom in supported Firefox/Chrome versions. Current automated tests are not browser end-to-end tests.
-- For extension-store distribution, prepare icons, screenshots, a privacy disclosure, store listing, and a compliant API key distribution strategy.
 
 ## Contributing
 
