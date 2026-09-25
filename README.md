@@ -30,7 +30,7 @@
 
    ```env
    DEEPSEEK_BASE_URL=https://api.deepseek.com
-   DEEPSEEK_MODEL=deepseek-chat
+   DEEPSEEK_MODEL=deepseek-flash
    ```
 
 2. 执行对应构建命令：
